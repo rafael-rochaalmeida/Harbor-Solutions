@@ -1,0 +1,64 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    background-color:  #323232;
+}
+.logo{
+    width: 200px;
+}
+.menu  {
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.menu li a {
+    color: #fff;
+}
+.menu li a:hover {
+    color: #69779b;
+}
+.botao {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #69779b;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color:#323232;
+  color: white;
+  width: 100%;
+}
+li{
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none; 
+  color: #69779b;
+}
+.box1 {
+    float: left;
+  margin-left: 250px;
+}
+h2 {
+    margin: 20px;
+}

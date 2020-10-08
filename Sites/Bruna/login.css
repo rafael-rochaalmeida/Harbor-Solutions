@@ -1,0 +1,126 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    background-color:  #323232;
+}
+.logo{
+    width: 200px;
+}
+.menu  {
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.menu li a {
+    color: #fff;
+}
+.menu li a:hover {
+    color: #69779b;
+}
+.botao {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #69779b;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color:#323232;
+  color: white;
+  width: 100%;
+  margin-top: 600px;
+}
+li{
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none; 
+  color: #69779b;
+}
+.box1 {
+    float: left;
+  margin-left: 250px;
+}
+h2 {
+    margin: 20px;
+}
+/* ---------------------------------------------------- */
+
+.box {
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50, -50%);
+    background: #323232;
+    text-align: center;
+}
+.box h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 220px;
+}
+
+.box input[type = "text"], .box input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px;
+    margin-left: 50px;
+    text-align: center;
+    border: 2px solid #69779b;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 18px;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus{
+    width: 270px;
+    border-color:  rgb(94, 192, 159);
+}
+
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid rgb(94, 192, 159);
+    padding: 14px 40px;
+    margin-left: 55px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.box input[type = "submit"]:hover{
+    background:  rgb(94, 192, 159);
+}
