@@ -1,0 +1,27 @@
+.flex-dashboard header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background: #121214;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+}
+
+header a{
+    text-decoration: none !important;
+   color: #fff;
+}
+
+
+header i{
+    color: #fff;
+}
+
+header a:hover{
+   transform: scale(1.05) ;
+    color: #fff;
+}
+
+

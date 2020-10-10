@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Começo do Menu */
+.meu-header{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-header ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.meu-header ul li{
+    width: 160px;
+    margin: 10px 15px;
+    padding: 15px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-header ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.meu-header ul li a i{
+   padding-right:20px;
+}
+
+
+/* Fim do Menu */
+
+/* Começo dos tópicos do menu */
+
+.li-home{
+    border-bottom: #42c5e6 solid 3px;
+}
+
+.li-home:hover {
+    background: #42c5e6;
+
+}
+
+.li-menu:hover a {
+    color: #fff;
+}
+
+.li-menu:hover{
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.li-sobre{
+    border-bottom: #ff6e71 solid 3px;
+}
+
+.li-sobre:hover {
+    background: #ff6e71;
+}
+
+.li-sistemas{
+    border-bottom: #afc26b solid 3px;
+}
+
+.li-sistemas:hover {
+    background: #afc26b;
+}
+
+.li-contato{
+    border-bottom: #4ab0a6 solid 3px;
+}
+
+.li-contato:hover {
+    background: #4ab0a6;
+}
+
+.li-simulador{
+    border-bottom: #a287c3 solid 3px;
+}
+
+.li-simulador:hover {
+    background: #a287c3;
+}
+
+.current{
+    background: #42c5e6;
+}
+.current-s{
+    background: #afc26b;
+}
+/* Fim dos tópicos do menu */
