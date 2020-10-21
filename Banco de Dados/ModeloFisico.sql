@@ -1,30 +1,42 @@
 create database harbor;
 use harbor;
 
+create table complementoCep(
+idCep char(8) primary key,
+lobradouro varchar(45),
+bairro varchar (45)
+);
+
+
 create table transportadora (
 idtransportadora int primary key auto_increment,
 nomecliente varchar(45),
 cnpj char (14),
 telefonefixo char (12),
 telefonecelular char (12),
-rua varchar(70),
-bairro varchar(50),
 numero int,
 complemento varchar(45),
-cep char(8)
+fkcep char(8),foreign key(fkCep) references complementoCep(idCep)
 );
 
 
-insert into transportadora (nomecliente, cnpj, telefonefixo, telefonecelular, 
-rua, bairro, numero, complemento, cep) values 
-('Americanas','89874652784765','119390282000','119403246742','Rua tupiniquins','Jardim Esmeralda',
-230,'Galpão C', '02678989'),
 
-('Golden','89874652789241','119390288798','119403200902','Rua Borges Lagoa','Brooklin',
-30,'Galpão A', '09872989'),
+insert into complementoCep values
+('02678989','Rua tupiniquins','Jardim Esmeralda'),
+('09872989','Rua Borges Lagoa','Brooklin'),
+('02670009','Rua Emanuel Nobrega','Coronel Gomes');
 
-('SeaTravel','89874652780011','119390297500','119408786742','Rua Emanuel Nobrega','Coronel Gomes',
-98,'Galpão B', '02670009');
+
+
+insert into transportadora (nomecliente, cnpj, telefonefixo, telefonecelular, numero, complemento, fkcep) values 
+('Americanas','89874652784765','119390282000','119403246742',230,'Galpão C', '02678989'),
+
+('Golden','89874652789241','119390288798','119403200902',30,'Galpão A', '09872989'),
+
+('SeaTravel','89874652780011','119390297500','119408786742',98,'Galpão B', '02670009');
+
+
+select *from complementoCep,transportadora where idCep = fkcep;
 
 create table container (
 idcontainer int primary key auto_increment,
