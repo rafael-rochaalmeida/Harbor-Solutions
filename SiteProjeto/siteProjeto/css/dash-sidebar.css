@@ -44,9 +44,10 @@
 
 }
 
-.menu li a:hover{
-    color:#000;
-    
+.menu li:hover{
+    color:#000 !important;
+    /* transition: all 800ms; */
+    transform: scale(1.02);
 }
 
 .menu i{
