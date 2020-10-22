@@ -53,23 +53,23 @@
 }
 
 .li-sobre{
-    border-bottom: #ff6e71 solid 3px;
+    border-bottom: #42c5e6 solid 3px;
 }
 
 .li-sobre:hover {
-    background: #ff6e71;
+    background: #42c5e6;
 }
 
 .li-sistemas{
-    border-bottom: #afc26b solid 3px;
+    border-bottom: #42c5e6 solid 3px;
 }
 
 .li-sistemas:hover {
-    background: #afc26b;
+    background: #42c5e6;
 }
 
 .li-contato{
-    border-bottom: #4ab0a6 solid 3px;
+    border-bottom: #42c5e6 solid 3px;
 }
 
 .li-contato:hover {
@@ -77,17 +77,17 @@
 }
 
 .li-simulador{
-    border-bottom: #a287c3 solid 3px;
+    border-bottom: #42c5e6 solid 3px;
 }
 
 .li-simulador:hover {
-    background: #a287c3;
+    background: #42c5e6;
 }
 
 .current{
-    background: #42c5e6;
+    background:#42c5e6;
 }
 .current-s{
-    background: #afc26b;
+    background: #42c5e6;
 }
 /* Fim dos tópicos do menu */

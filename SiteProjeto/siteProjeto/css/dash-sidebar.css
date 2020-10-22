@@ -19,7 +19,7 @@
     padding: 10px 30px;
     border: 1px solid rgba(0, 0, 0, .0625);
     border-right: 0px;
-    color: #000;
+    color: #000 !important;
 }
 
 .sidebar-title img{
