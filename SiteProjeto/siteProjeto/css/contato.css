@@ -8,106 +8,101 @@
     --color-two: #3a4750;
     --color-three: #00adb5;
     --color-four: #eeeeee;
-    --color-five: #000000;
-    --color-six: #ff6e71;
-    --color-seven: #afc26b;
-    --color-eight: #a287c3;
+
 }
 body {
+    background-color: var(--color-two);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-weight: 600;
+    font-size: 16px;
+}
+.linha{
+    background-color: var(--color-three);
+    width: 100%;
+    height: 200px;
+    border-top: 5px solid var(--color-four) ;
+     
+}
+.linha .titulo{
+    margin-left: 740px;
+    margin-top: 70px;
+}
+
+
+
+    /* Entre em contato  -------------------------------------------------- Entre em contato*/
+.contato-box{
+    background-color: var(--color-two);
+    width: 500px;
+    margin: 0 auto;
+    padding: 0 10px 10px 10px;
+    margin-top: 150px;
+    margin-right: 200px;
+    border-radius: 8px;
+    border: 3px solid black;
+}
+.contato-box:hover{
     background-color: var(--color-one);
+
 }
 
-/* Começo do Menu */
-/* .meu-header{
-    background: var(--color-five);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input, textarea{
+    width: 470px;
+    padding: 10px;
+    height: 20px;
+    border-radius: 8px;
 }
 
-.meu-header ul{
-    display: inline-flex;
-    list-style: none;
+.mensagem{
+    height: 90px;
 }
 
-.meu-header ul li{
-    width: 160px;
-    margin: 10px 15px;
-    padding: 15px;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.meu-header ul li a{
-    text-decoration: none;
-    color: var(--color-four);
-}
-.meu-header ul li a i{
-   padding-right:20px;
-} */
-
-
-/* Fim do Menu */
-
-/* Começo dos tópicos do menu */
-
-/* .li-home{
-    border-bottom: var(--color-three) solid 3px;
-}
-
-.li-home:hover {
+.envio{
     background: var(--color-three);
-
-}
-
-.li-menu:hover a {
-    color: var(--color-four);
-}
-
-.li-menu:hover{
+    color: #eeeeee;
+    height: 40px;
+    width: 140px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid;
     cursor: pointer;
-    transition: 600ms;
 }
 
-.li-sobre{
-    border-bottom: var(--color-six) solid 3px;
+.envio:hover{
+    background-color: var(--color-four);
+    color: var(--color-one);
 }
 
-.li-sobre:hover {
-    background: var(--color-six);
+h1{
+    color: #eeeeee;
+    margin: auto;
+    margin-left: 100px;
 }
 
-.li-sistemas{
-    border-bottom: var(--color-seven) solid 3px;
-}
+ /* Entre em contato -FIM -------------------------------------------------- Entre em contato -FIM*/
+ 
 
-.li-sistemas:hover {
-    background: var(--color-seven);
-}
 
-.li-contato{
-    border-bottom: var(--color-three) solid 3px;
-}
+ .localiza{
+    margin-left: 20px;
+    color: var(--color-four);
+    
+ }
+ .localizar{
+     color: var(--color-four);
+ }
 
-.li-contato:hover {
-    background: var(--color-three);
-}
+ .map{
+     margin-top: -450px;
+     margin-left:250px;
+    
+ }
 
-.li-simulador{
-    border-bottom: var(--color-eight) solid 3px;
-}
-
-.li-simulador:hover {
-    background: var(--color-eight);
-}
-
-.current{
-    background: var(--color-three);
-} */
-/* .current-s{
-    background: var(--color-seven);
-} */
-
-/* Fim dos tópicos do menu */
+ .infos{
+     margin-top: -370px;
+     margin-left: 750px;
+     color: var(--color-four);
+ }
