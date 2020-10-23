@@ -1,0 +1,309 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+:root {
+    --color-one: #303841;
+    --color-two: #3a4750;
+    --color-three: #00adb5;
+    --color-four: #eeeeee;
+    --color-five: #000000;
+    --color-six: #ff6e71;
+    --color-seven: #afc26b;
+    --color-eight: #a287c3;
+}
+body {
+    background-color: var(--color-one);
+}
+
+/* Começo do Menu */
+/* .meu-header{
+    background: var(--color-five);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-header ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.meu-header ul li{
+    width: 160px;
+    margin: 10px 15px;
+    padding: 15px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meu-header ul li a{
+    text-decoration: none;
+    color: var(--color-four);
+}
+.meu-header ul li a i{
+   padding-right:20px;
+} */
+
+
+/* Fim do Menu */
+
+/* Começo dos tópicos do menu */
+
+/* .li-home{
+    border-bottom: var(--color-three) solid 3px;
+}
+
+.li-home:hover {
+    background: var(--color-three);
+
+}
+
+.li-menu:hover a {
+    color: var(--color-four);
+}
+
+.li-menu:hover{
+    cursor: pointer;
+    transition: 600ms;
+}
+
+.li-sobre{
+    border-bottom: var(--color-six) solid 3px;
+}
+
+.li-sobre:hover {
+    background: var(--color-six);
+}
+
+.li-sistemas{
+    border-bottom: var(--color-seven) solid 3px;
+}
+
+.li-sistemas:hover {
+    background: var(--color-seven);
+}
+
+.li-contato{
+    border-bottom: var(--color-three) solid 3px;
+}
+
+.li-contato:hover {
+    background: var(--color-three);
+}
+
+.li-simulador{
+    border-bottom: var(--color-eight) solid 3px;
+}
+
+.li-simulador:hover {
+    background: var(--color-eight);
+}
+
+.current{
+    background: var(--color-three);
+} */
+/* .current-s{
+    background: var(--color-seven);
+} */
+
+/* Fim dos tópicos do menu */
+
+
+/* --------------------------------------- titulo --------------------------------------------- */
+.titulo{
+    margin: 3%;
+}
+h2 {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 40px;
+    color: var(--color-four);
+    letter-spacing: 3px;
+}
+
+.sub{
+    text-align: center;
+    margin: 1%;
+    color: var(--color-four);
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+/* ---------------------------------------- conteudo sobre ----------------------------------------- */
+.box-texto{
+    text-align: center;
+    margin-top: 30px;
+    width: 520px;
+    padding: 30px;
+    margin-left: 660px;
+    float: left;
+    background-color: var(--color-two);
+    color: var(--color-four);
+    border-radius: 10px;
+}
+
+  /* ----------------------------------------- imagens * --------------------------------------- */ 
+  
+img {
+    width: 500px;
+    border-radius: 10px;
+}  
+  
+.flip-container {
+    width: 350px;
+    height: 360px;
+    perspective: 1000px;
+}
+
+.flipper {
+    margin-top: 25%;
+    margin-left: 40px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+  
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+  
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.back {
+    transform: rotateY(180deg);
+}
+/* --------------------------------------- Fim das imagens ------------------------------------- */
+
+/*------------------------------------------ rodapé ---------------------------------------------*/
+
+footer {
+    background-color: var(--color-two);
+    padding: 50px 0;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.logo {
+    width: 250px;
+    margin-left: 70px;
+}
+
+.social-media{
+    margin: 20px 0;
+    margin-left: 100px;
+}
+.social-media a {
+    color: var(--color-four);
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+.social-media a:hover {
+    color: var(--color-three);
+}
+
+.rigths-text {
+    color: var(--color-four);
+    margin-left: 100px;
+
+} 
+
+.right-col h1 {
+    font-size: 26px;
+    color: var(--color-four);
+}
+
+.border {
+    width: 100px;
+    height: 4px;
+    background: var(--color-three);
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p {
+    margin: 10px;
+    color: var(--color-four);
+}
+
+.txtb {
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: var(--color-two);
+    background: var(--color-four);
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+}
+
+.btn {
+    padding: 18px 40px;
+    font-size: 16px;
+    color: var(--color-four);
+    background: var(--color-three);
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+@media screen and (max-width: 960px){
+
+    .footer-container {
+        max-width: 600px;
+    }
+    .right-col {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .left-col {
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+
+    .btm {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+/* ------------------------------------------- Fim rodapé ----------------------------------------------- */
