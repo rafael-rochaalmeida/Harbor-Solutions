@@ -1,0 +1,157 @@
+body {
+    background-image: url(../img/fundo2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-weight: 600;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+}
+.logo{
+    width: 200px;
+}
+.menu  {
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.menu li a {
+    color: #fff;
+}
+.menu li a:hover {
+    color: #69779b;
+}
+.botao {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #69779b;
+}
+.titulo {
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    margin-top: 130px;
+    font-weight: 300;
+}
+.sub {
+  font-weight: 200;
+  font-size: 15px;
+  margin: 20px;
+}
+.conteudo{
+    background-color: aliceblue;
+    margin-top: 300px;
+}
+.container {
+    width: 90%;
+    margin: 50px auto;
+}
+.fundo2 {
+    background-position: center;
+}
+  
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 400px;
+  }
+  
+  .card {
+    width: 20%;
+    background: #323232;
+    border: 1px solid #212121;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    color: #fff;
+  }
+  
+  .card-header {
+    text-align: center;
+    padding: 50px 10px;
+    background: #fff;
+    color: rgb(0, 0, 0);
+  }
+
+  .card-body {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .card-body .btn {
+    display: block;
+    text-align: center;
+    background:#69779b;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.486);
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container {
+      width: 100%;
+    }
+    .heading {
+      padding: 20px;
+      font-size: 20px;
+    }
+    .card {
+      width: 80%;
+    }
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#323232;
+    color: white;
+    width: 100%;
+    font-weight: 300;
+  }
+  li{
+    list-style: none;
+  }
+  footer ul li a {
+    text-decoration: none; 
+    color: #69779b;
+  }
+  footer ul li a:hover {
+    color: #fff;
+  } 
+  .box1 {
+    float: left;
+    margin-left: 250px;
+  }
+  h2 {
+      margin: 20px;
+  }
