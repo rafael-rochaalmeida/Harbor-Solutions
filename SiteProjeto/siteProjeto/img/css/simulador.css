@@ -1,0 +1,115 @@
+    .main_simulador {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 92%;
+    }
+    
+    .container_simulador {
+        width: 40vw;
+        height: 60vh;
+    }
+    
+    .box_simulador {
+        width: 40vw;
+        height: 60vh;
+        display: flex;
+        color: white;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 50px;
+        opacity: 93%;
+        font-size: 28px;
+        text-align: center;
+        transition-duration: 1s;
+    }
+    
+    .box_simulador:hover {
+        color: black;
+    }
+    
+    .box_simulador::before {
+        content: "";
+        width: 0vw;
+        height: 55vh;
+        background: linear-gradient(#42c5e6, #81c6d8);
+        position: absolute;
+        z-index: -1;
+        border-top-left-radius: 50px;
+        transition-duration: 0.3s;
+        border-bottom-left-radius: 50px;
+    }
+    
+    .box_simulador:hover::before {
+        width: 20vw;
+        height: 60vh;
+    }
+    
+    .box_simulador::after {
+        content: "";
+        width: 0vw;
+        height: 55vh;
+        background: linear-gradient(#42c5e6, #81c6d8);
+        position: absolute;
+        z-index: -1;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        transition-duration: 0.3s;
+        align-self: flex-end;
+    }
+    
+    .box_simulador:hover::after {
+        width: 20vw;
+        height: 60vh;
+    }
+    
+    .box_simulador input {
+        width: 45%;
+        height: 15%;
+        align-self: center;
+        margin-bottom: 20px;
+        padding: 2px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .box_simulador input:focus {
+        padding-top: 10px;
+    }
+    
+    .box_simulador input::placeholder {
+        color: white;
+        font-size: 18px;
+        transition: 1s;
+    }
+    /* COLOCAR PREENCHIMENTO DO INPUT LEFT TO RIGHT*/
+    
+    .box_simulador:hover input::placeholder {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .box_simulador input:focus::placeholder {
+        transform: translateY(-30px);
+    }
+    
+    .box_simulador button {
+        align-self: center;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .box_simulador button:hover {
+        background-color: #ffffff;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .text_simulador {
+        margin-bottom: 20px;
+    }
