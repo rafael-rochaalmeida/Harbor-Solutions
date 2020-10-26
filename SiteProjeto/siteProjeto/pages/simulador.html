@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/Menu.css">
     <link rel="stylesheet" href="../css/simulador.css">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.14.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css/reset.css">
 
 
@@ -27,14 +27,14 @@
         <!-- <img src="img/HARBOR SOLUTIONS.png" class="logo"> -->
         <div class="meu-header">
             <ul>
-                <li class="li-menu li-home"><a href="index.html"><i class="fa fa-home"></i> Home</a>
+                <li class="li-menu li-home"><a href=""><i class="fa fa-home"></i> Home</a>
                 </li>
-                <li class="li-menu li-sobre"><a href="#"><i class="fa fa-users"></i>Sobre</a>
+                <li class="li-menu li-sobre"><a href="./sobre.html"><i class="fa fa-users"></i>Sobre</a>
                 </li>
-                <li class="li-menu li-sistemas " id=""><a href="pages/login.html"><i
+                <li class="li-menu li-sistemas " id=""><a href="./dashboard.html"><i
                           class="fas fa-box"></i>Sistema</a>
                 </li>
-                <li class="li-menu li-contato"><a href="#"><i class="fas fa-tty"></i>Contato</a>
+                <li class="li-menu li-contato"><a href="./contato.html"><i class="fas fa-tty"></i>Contato</a>
                 </li>
                 <li class="li-menu li-simulador current-s"><a href="#"><i class="fas fa-search-dollar"></i>Simulador</a>
                 </li>
@@ -45,11 +45,38 @@
     <div class="main_simulador">
         <div class="container_simulador">
             <div class="box_simulador">
+                <div class="box_into">
 
-                <input type="text" placeholder="Digite a quantidade de Sensores" id="qtd_sensor">
-                <div class="box_botao">
+                    <input type="text" required="required" id="qtd_sensor" style="display: block;"><span class="txt_unidade">Digite a quantidade de Sensores desejados</span>
+                    <span class="txt_desconto"> Desconto de X% na compra acima de 5 sensores</span>
                     <button class="botao" onclick="clicar()">Total a pagar</button>
+
+                    <div id="mensagem" class="mensagem">
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+</body>
+
+<script>
+    function clicar() {
+        var sensor = Number(qtd_sensor.value);
+        var valor_sensor = 11.50 * sensor;
+        var desconto = (valor_sensor * 70) / 100;
+
+
+        if (sensor > 5) {
+            mensagem.innerHTML = `A unidade(sensor) seria de R$ ${11.50} <br> Com X% de desconto o valor total será de: R$ ${desconto.toFixed(2)}na compra de ${sensor} sensores.`;
+            qtd_sensor.value.style.display = 'none';
+
+        } else {
+            mensagem.innerHTML = `A unidade(sensor) será de: R$ ${11.50} <br> Totalizando: ${valor_sensor.toFixed(2)},   na compra de ${sensor} sensores.`;
+            qtd_sensor.value.style.display = 'none';
+        }
+
+    }
+</script>
