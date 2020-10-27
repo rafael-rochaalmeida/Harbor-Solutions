@@ -13,22 +13,27 @@
 body {
     background-color: var(--color-two);
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     font-weight: 600;
     font-size: 16px;
 }
-.linha{
-    background-color: var(--color-three);
-    width: 100%;
-    height: 200px;
-    border-top: 5px solid var(--color-four) ;
-     
+
+.linha h1 {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+
+
+
 }
-.linha .titulo{
-    margin-left: 740px;
-    margin-top: 70px;
+
+.tudo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
 }
 
 
@@ -36,14 +41,32 @@ body {
     /* Entre em contato  -------------------------------------------------- Entre em contato*/
 .contato-box{
     background-color: var(--color-two);
-    width: 500px;
-    margin: 0 auto;
+    width: 400px;
     padding: 0 10px 10px 10px;
-    margin-top: 150px;
-    margin-right: 200px;
     border-radius: 8px;
-    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 65px;
 }
+
+.contato-box h2{
+    color: var(--color-four);
+    display: flex;
+    align-self: center ;
+
+}
+
+.contato-box input{
+    width: 350px;
+}
+
+.contato-box textarea{
+    width: 350px;
+    height: 30px;
+}
+
 .contato-box:hover{
     background-color: var(--color-one);
 
@@ -87,22 +110,33 @@ h1{
 
 
  .localiza{
-    margin-left: 20px;
-    color: var(--color-four);
+        color: var(--color-four);
+
     
  }
  .localizar{
      color: var(--color-four);
  }
 
- .map{
-     margin-top: -450px;
-     margin-left:250px;
-    
+ .infos{
+    color: var(--color-four);
+    height: 52vh;
+    margin-top: -80px;  
+ }
+ .infos h2{
+     
  }
 
- .infos{
-     margin-top: -370px;
-     margin-left: 750px;
+ .infos span{
      color: var(--color-four);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 60px;
+
+ }
+
+
+ .tudo .map{
+     margin-top: -60px;
  }
