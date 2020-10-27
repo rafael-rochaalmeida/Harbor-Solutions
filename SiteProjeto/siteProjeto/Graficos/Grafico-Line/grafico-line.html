@@ -22,18 +22,9 @@
 <link rel="shortcut icon" href="../../img/PG.png">
 <link rel="stylesheet" href="../../fontawesome-free-5.14.0-web/css/all.min.css">
 
-
-
-
-
-
-
-
 </head>
 
 <body>
-
-
 
 	<div class="flex-dashboard">
         <div class="sidebar">
@@ -47,10 +38,10 @@
                         <i class="far fa-chart-bar"></i>
                         <a href="grafico-line.html">Dashboard</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <i class="fas fa-user-circle"></i>
                         <a href="#">Perfil</a>
-                    </li>
+                    </li> -->
                     <li>
                         <i class="fas fa-plus-square"></i>
                         <a href="../../pages/cadastro.html">Cadastro</a>
@@ -71,45 +62,23 @@
              <div class="main-content-title">
                  <h2>DASHBOARD</h2>
 			 </div>
-			 
-			 <div>
-				<div style="width:75%;">
+		
+			 <di  class="main-content-graficos">
+				<div style="width:100%;">
 					<canvas id="c_grafico"></canvas>
 				</div>
 			
-			</div>
+			</di>
 
             </div>
         </main> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
   
 </body>
 
 </html>
 
 <script>
+
 	var context = document.getElementById("c_grafico").getContext("2d");
 		context.canvas.width = 1000;
 		context.canvas.height = 300;
@@ -120,8 +89,10 @@
 			labels: [],
 			datasets: [{
 				label: 'Temperatura',
-				backgroundColor: window.chartColors.blue,
-				borderColor: window.chartColors.blue,
+				// backgroundColor: window.chartColors.blue,
+				// borderColor: window.chartColors.blue,
+				borderColor: ['#74b9ff'],
+				backgroundColor: ['#74b9ff'],
 				data: [],
 				fill: false,
 			}]
@@ -160,66 +131,40 @@
 	};
 	var chart = new Chart(context, config);
 
-	    this.lastIndexTemp = 0;
-        this.time = 0;
+// 	    this.lastIndexTemp = 0;
+//         this.time = 0;
 
 
+// function get_data(){
 
+// var http = new XMLHttpRequest();
+// http.open('GET', 'http://localhost:3000/api', false);
+// http.send(null);        
 
+// var obj = JSON.parse(http.responseText);
+// if (obj.data.length == 0){
+// 	return;
+// }
 
+// var _lastIndexTemp = this.lastIndexTemp;
+// this.lastIndexTemp = obj.data.length;
+// listTemp = obj.data.slice(_lastIndexTemp);
 
+// listTemp.forEach(data => {
+// 	//Máximo de 60 itens exibidos no gráfico
+// 	if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+// 		chart.data.labels.shift();
+// 		chart.data.datasets[0].data.shift();
+// 	}
 
+// 	chart.data.labels.push(this.time++);
+// 	chart.data.datasets[0].data.push(parseFloat(data));
+// 	chart.update();
+// });
 
-
-
-
-		function get_data(){
-
-var http = new XMLHttpRequest();
-http.open('GET', 'http://localhost:3000/api', false);
-http.send(null);        
-
-var obj = JSON.parse(http.responseText);
-if (obj.data.length == 0){
-	return;
-}
-
-var _lastIndexTemp = this.lastIndexTemp;
-this.lastIndexTemp = obj.data.length;
-listTemp = obj.data.slice(_lastIndexTemp);
-
-listTemp.forEach(data => {
-	//Máximo de 60 itens exibidos no gráfico
-	if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
-		chart.data.labels.shift();
-		chart.data.datasets[0].data.shift();
-	}
-
-	chart.data.labels.push(this.time++);
-	chart.data.datasets[0].data.push(parseFloat(data));
-	chart.update();
-});
-
-document.getElementById('average').textContent = obj.average;
-document.getElementById('averageHour').textContent = obj.averageHour;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// document.getElementById('average').textContent = obj.average;
+// document.getElementById('averageHour').textContent = obj.averageHour;
+// } 
 
 
 
@@ -231,60 +176,60 @@ setInterval(() => {
         }, 1000);
 
 
-// 	// esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
-// 	function sortearTemperatura() {
-// 		var limiteMin = -10;
-// 		var limiteMax = 70;
-// 		var minimoAbsoluto = Math.abs(limiteMin);
-// 		return (Math.random() * (minimoAbsoluto+limiteMax) - minimoAbsoluto).toFixed(1);
-// 	}
+	// esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
+	function sortearTemperatura() {
+		var limiteMin = -10;
+		var limiteMax = 70;
+		var minimoAbsoluto = Math.abs(limiteMin);
+		return (Math.random() * (minimoAbsoluto+limiteMax) - minimoAbsoluto).toFixed(1);
+	}
 
-	// function recuperarDadosIniciais() {
+	function recuperarDadosIniciais() {
 
-	// 	// esse "registros" será recuperado do backend futuramente
-	// 	var registros = [
-	// 		{
-	// 			momento: '00:03:42',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:03:52',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:04:02',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:04:12',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:04:22',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:04:32',
-	// 			leitura: sortearTemperatura()
-	// 		},
-	// 		{
-	// 			momento: '00:04:42',
-	// 			leitura: sortearTemperatura()
-	// 		}
-	// 	];
+		// esse "registros" será recuperado do backend futuramente
+		var registros = [
+			{
+				momento: '00:03:42',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:03:52',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:02',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:12',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:22',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:32',
+				leitura: sortearTemperatura()
+			},
+			{
+				momento: '00:04:42',
+				leitura: sortearTemperatura()
+			}
+		];
 
-	// 	var contador = 0;
+		var contador = 0;
 
-	// 	// registros.length é a quantidade de itens em "registros"
-	// 	while (contador < registros.length) {
+		// registros.length é a quantidade de itens em "registros"
+		while (contador < registros.length) {
 
-	// 		config.data.labels.push(registros[contador].momento);  // incluir um novo momento
-	// 		config.data.datasets[0].data.push(registros[contador].leitura);  // incluir uma nova leitura
+			config.data.labels.push(registros[contador].momento);  // incluir um novo momento
+			config.data.datasets[0].data.push(registros[contador].leitura);  // incluir uma nova leitura
 
-	// 		contador++;
-	// 	}
+			contador++;
+		}
 
-	// }
+	}
 
 	function receberNovasLeituras() {
 		setTimeout(() => {

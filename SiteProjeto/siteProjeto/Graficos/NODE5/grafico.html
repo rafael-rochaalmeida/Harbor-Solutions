@@ -41,10 +41,10 @@
                         <i class="far fa-chart-bar"></i>
                         <a href="../Grafico-Line/grafico-line.html">Dashboard</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <i class="fas fa-user-circle"></i>
                         <a href="#">Perfil</a>
-                    </li>
+                    </li> -->
                     <li>
                         <i class="fas fa-plus-square"></i>
                         <a href="../../pages/cadastro.html">Cadastro</a>
@@ -66,8 +66,8 @@
                  <h2>GRÁFICOS</h2>
 			 </div>
 			 
-			 <div>
-				<h1>Sensor LM35 - Temperatura</h1>
+			 <div class="main-content-graficos">
+				<h1>Temperatura dos Containers</h1>
 					<section>
 						<h2>Média: <label id='average'>0.00</label></h2>
 						<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
@@ -122,8 +122,8 @@
 				datasets: [{
 					label: "Temperature x Time",
 					type: 'line',
-					borderColor: ['#ff3232'],
-					backgroundColor: ['#ff7f7f']
+					borderColor: ['#74b9ff'],
+					backgroundColor: ['#74b9ff']
 				}]
 			},
 			options: {

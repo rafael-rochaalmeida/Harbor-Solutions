@@ -12,6 +12,22 @@ main .main-content{
     overflow-y: auto;
 }
 
+.main-content-graficos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-graficos section{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   justify-content: end; 
+}
+
 .main-content-title{
      padding: 5px 0;
 }

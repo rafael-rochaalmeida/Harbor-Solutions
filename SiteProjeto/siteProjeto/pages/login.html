@@ -23,14 +23,14 @@
             <ul>
                 <li class="li-menu li-home"><a href="../index.html"><i class="fa fa-home"></i> Home</a>
                 </li>
-                <li class="li-menu li-sobre"><a href="#"><i class="fa fa-users"></i> Sobre</a>
+                <li class="li-menu li-sobre"><a href="sobre.html"><i class="fa fa-users"></i> Sobre</a>
                 </li>
                 <li class="li-menu li-sistemas current-s" id=""><a href="login.html"><i
                             class="fas fa-box"></i>Sistema</a>
                 </li>
-                <li class="li-menu li-contato"><a href="#"><i class="fas fa-tty"></i>Contato</a>
+                <li class="li-menu li-contato"><a href="contato.html"><i class="fas fa-tty"></i>Contato</a>
                 </li>
-                <li class="li-menu li-simulador"><a href="#"><i class="fas fa-search-dollar"></i>Simulador</a>
+                <li class="li-menu li-simulador"><a href="simulador.html"><i class="fas fa-search-dollar"></i>Simulador</a>
                 </li>
             </ul>
         </div>
@@ -40,15 +40,14 @@
         <div class="login">
             <i class="fas fa-user-circle usuario"></i>
             <h1>Login</h1>
-            <form>
+            <form >
                 <label for="email">Usuário</label>
                 <input type="email" name="" id="email" placeholder="Infome o usuário">
                 <label for="senha">Senha</label>
                 <input type="password" name="" id="senha" placeholder="Informe a senha">
-                <!-- <a class="submit" href="">Logar</a> -->
-                <input onclick="logar_sistema()" class="submit" type="submit" name="logar" id="login">
+                <button class="submit" type="button" onclick="logar_sistema()">enviar</button>
             </form>
-            <!-- <div style="color: red;" id="mensagem"></div> -->
+            
         </div>
     </div>
 <script src="../js/login.js"></script>
