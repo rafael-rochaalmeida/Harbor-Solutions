@@ -49,7 +49,7 @@
                 <div class="box_into">
 
                     <input type="text" required="required" id="qtd_sensor" style="display: block;"><span class="txt_unidade">Digite a quantidade de Sensores desejados</span>
-                    <span class="txt_desconto"> Desconto de X% na compra acima de 5 sensores</span>
+                    <span class="txt_desconto"> Desconto de 20% na compra acima de 5 sensores</span>
                     <button class="botao" onclick="clicar()">Total a pagar</button>
 
                     <div id="mensagem" class="mensagem">
@@ -93,16 +93,16 @@
     function clicar() {
         var sensor = Number(qtd_sensor.value);
         var valor_sensor = 11.50 * sensor;
-        var desconto = (valor_sensor * 70) / 100;
-
+        var desconto = (valor_sensor * 0.8); 
+        qtd_sensor.value = '';
 
         if (sensor > 5) {
-            mensagem.innerHTML = `A unidade(sensor) seria de R$ ${11.50} <br> Com X% de desconto o valor total será de: R$ ${desconto.toFixed(2)}na compra de ${sensor} sensores.`;
-            qtd_sensor.value.style.display = 'none';
+            mensagem.innerHTML = `A unidade(sensor) seria de R$ ${11.50} <br> Com 20% de desconto o valor total será de: R$ ${desconto.toFixed(2)} na compra de ${sensor} sensores.`;
+            
 
         } else {
             mensagem.innerHTML = `A unidade(sensor) será de: R$ ${11.50} <br> Totalizando: ${valor_sensor.toFixed(2)},   na compra de ${sensor} sensores.`;
-            qtd_sensor.value.style.display = 'none';
+            
         }
 
     }
