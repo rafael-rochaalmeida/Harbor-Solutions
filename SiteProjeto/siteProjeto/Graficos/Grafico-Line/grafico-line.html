@@ -126,8 +126,8 @@
 
 	// esse "sortearTemperatura()" será desnecessário quando usarmos o backend futuramente
 	function sortearTemperatura() {
-		var limiteMin = -20;
-		var limiteMax = -15;
+		var limiteMin = -25;
+		var limiteMax = -8;
 		var minimoAbsoluto = Math.abs(limiteMin);
 		return (Math.random() * (minimoAbsoluto+limiteMax) - minimoAbsoluto).toFixed(1);
 	}
