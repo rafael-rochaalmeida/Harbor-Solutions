@@ -11,7 +11,7 @@
 
 }
 body {
-    background-color: var(--color-two);
+    background-color: var(--color-one);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
