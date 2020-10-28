@@ -23,56 +23,60 @@ numero int,
 complemento varchar(45),
 fkcep int,
 foreign key(fkCep) references Cep(idCep)
-)auto_increment = 100;
+)auto_increment = 10;
 
-
+select * from transportadora;
 
 insert into transportadora (nomecliente, cnpj, telefonefixo, telefonecelular, numero, complemento, fkcep) values 
-('Americanas','89874652784765','1193902820','11940324672',230,'Galpão C', '02678989'),
+('Americanas','89874652784765','1193902820','11940324672',230,'Galpão C', 1),
 
-('Golden','89874652789241','1193902887','11940320090',30,'Galpão A', '09872989'),
+('Golden','89874652789241','1193902887','11940320090',30,'Galpão A', 2),
 
-('SeaTravel','89874652780011','1193902975','11940878674',98,'Galpão B', '02670009');
+('SeaTravel','89874652780011','1193902975','11940878674',98,'Galpão B', 3);
 
 
-select *from complementoCep,transportadora where idCep = fkcep;
+select *from Cep,transportadora where idCep = fkcep;
 
 create table container (
 idcontainer int primary key auto_increment,
-tipodecarga varchar(45),
+tipodePeixe varchar(6),
+check (tipodepeixe = 'polaca' or tipodepeixe = 'panga'),
 modelocontainer varchar (60),
+tiposensor varchar(45),
 fktransportadora int,
 foreign key (fktransportadora) references transportadora(idtransportadora)
-) auto_increment = 100;
+) auto_increment = 30;
 
-insert into container (tipodecarga, modelocontainer, fktransportadora) values
+insert into container (tipodePeixe, modelocontainer,tiposensor, fktransportadora) values
 
-('Alimenticio','refrigerador',1),
-('Alimenticio','refrigerador',2),
-('Alimenticio','refrigerador',3);
+('polaca','Reefer','Temperatura',10),
+('panga','Reefer','Temperatura',12),
+('polaca','Reefer','Temperatura',11);
 
-
-create table sensor (
-idsensor int primary key auto_increment,
-fkcontainer int,
-foreign key (fkcontainer) references container(idcontainer)
-) auto_increment = 1000;
-
-insert into sensor (fkcontainer) values 
-(100),
-(101),
-(102);
 
 create table dadosensor (
-iddados int primary key auto_increment,
-temperatura varchar(5),
-datahora datetime,
-fksensor int,
-foreign key (fksensor) references sensor(idsensor)
-)auto_increment = 2000;
+iddadosensor int primary key auto_increment,
+fkcontainer int,
+foreign key (fkcontainer) references container(idcontainer),
+temperatura float,
+datahora datetime
+) auto_increment = 40;
 
-insert into dadosensor (temperatura, datahora,fksensor) values 
+insert into dadosensor (fkcontainer,temperatura,datahora) values 
+(30,17.8, '2020-07-12 12:04:02'),
+(31,18.2,'2020-07-13 10:00:22'),
+(32,17.6,'2020-07-14 09:27:31');
 
-('2.0','2020-10-10 13:20:45',1000),
-('1.0','2020-10-05 05:30:15',1001),
-('5.0','2020-10-08 23:12:52',1002);
+create table usuario (
+idusuario int primary key auto_increment,
+loginUsuario varchar(45),
+senhaUsuario varchar(45),
+nomeUsuario varchar(45),
+fktransportadora int,
+foreign key (fktransportadora) references transportadora(idtransportadora)
+);
+
+insert into usuario (loginusuario,senhausuario,nomeusuario,fktransportadora) values 
+('nicholas.forte@gmail.com','nicholas123','Nicholas',10),
+('bruna.brito@gmail.com','bruna123','Bruna',12),
+('pedro.gimenez@gmail.com','pedro123','Pedro',11);
