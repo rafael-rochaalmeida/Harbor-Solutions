@@ -3,7 +3,7 @@ function logar_sistema() {
     var senha_user = senha.value;
 
     var login_user = "habor@solutions.com.br";
-    if(email_user == login_user && senha_user == 'h123'){
+    if(email_user == login_user && senha_user == '123'){
         login_valido();
     } else{
         alert('Senha ou login inválido')
