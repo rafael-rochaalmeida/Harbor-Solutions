@@ -1,6 +1,6 @@
 function lm35(min, max) {
-    min = typeof min == 'undefined' ? -25 : min;
-    max = typeof max == 'undefined' ? -8 : max;
+    min = typeof min == 'undefined' ? -40: min;
+    max = typeof max == 'undefined' ? 10 : max;
     
     let random = Math.random() * (max - min) + min;
 
